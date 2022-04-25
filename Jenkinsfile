@@ -4,13 +4,13 @@ pipeline{
     stage('Build'){
       steps{
         echo 'running Tests'
-        bat 'mvn test'
+        bat 'python test.py'
       }
     }
     stage('Testing'){
       steps{
         echo 'Building jar files...'
-        bat 'mvn package'
+        
       }
     }
   }
